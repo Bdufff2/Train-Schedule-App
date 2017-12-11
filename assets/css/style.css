@@ -1,0 +1,19 @@
+body {
+    background-image: url("../images/train-station.jpg");
+}
+
+#train-table, #user-input {
+    border: 1px solid maroon;
+    background-color: rgba(255, 255, 255, 0.801);
+
+}
+
+#wrapper {
+    margin: 10px;
+}
+
+.jumbotron {
+    text-align: center;
+    Background-color: maroon;
+    color: white;
+}
