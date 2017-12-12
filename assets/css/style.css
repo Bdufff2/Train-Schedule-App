@@ -17,3 +17,6 @@ body {
     Background-color: maroon;
     color: white;
 }
+tbody, .theader {
+    text-align: center;
+}

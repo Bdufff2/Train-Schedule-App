@@ -1,5 +1,3 @@
-
-// Initialize Firebase
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyBmMuEWylCvmnDq9fJnlSqBCou_rZtoJt8",
@@ -28,14 +26,15 @@ $("#submit-train-info").on("click", function () {
     dest: destination,
     initial: initialTrain,
     freq: frequency
-
   };
+
+  // push user input into firebase
   database.ref().push(tempTrain);
 
-  console.log(tempTrain.name);
-  console.log(tempTrain.dest);
-  console.log(tempTrain.initial);
-  console.log(tempTrain.freq);
+  // console.log(tempTrain.name);
+  // console.log(tempTrain.dest);
+  // console.log(tempTrain.initial);
+  // console.log(tempTrain.freq);
 
   // clear all user entry fields
   $("#train-name").val("");
@@ -44,19 +43,41 @@ $("#submit-train-info").on("click", function () {
   $("#frequency").val("");
 });
 
-database.ref().on("child_added", function(childSnapshot) {
-  console.log(childSnapshot.val());
-// create variable to store snapshot
+database.ref().on("child_added", function (childSnapshot) {
+  // console.log(childSnapshot.val());
+
+  // create variable to store snapshot
   var trainName = childSnapshot.val().name;
   var destination = childSnapshot.val().dest;
   var initialTrain = childSnapshot.val().initial;
   var frequency = childSnapshot.val().freq;
+
+  // console.log(trainName);
+  // console.log(destination);
+  // console.log(initialTrain);
+  // console.log(frequency);
+
+
+
+
+  // calculations
+// ------------------------------------------------------------------
+  // var currentTime = moment();
+
+  // var diffTime = moment().diff(moment(initialTrain), "minutes");
+  // var tRemainder = diffTime % Frequency;
+  // console.log(tRemainder);
+  // calculate the next arrival time based off of initial train time
+  // next arrival =
+
+  // var nextArrivingTrain = moment(initialTrain).format("HH:mm");
+
+  // calculate the minutes away 
   
-  console.log(tempTrain);
-  console.log(tempTrain);
-  console.log(tempTrain);
-  console.log(tempTrain);
 
 
+  // display to user input to html
+  // need to add last two variables to the table
+    $("#train-shedule-table > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td></tr>");
 
 });
