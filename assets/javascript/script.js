@@ -62,20 +62,24 @@ database.ref().on("child_added", function (childSnapshot) {
 
   // calculations
 // ------------------------------------------------------------------
-  // var currentTime = moment();
-
-  // var diffTime = moment().diff(moment(initialTrain), "minutes");
-  // var tRemainder = diffTime % Frequency;
-  // console.log(tRemainder);
-  // calculate the next arrival time based off of initial train time
-  // next arrival =
+  
 
   // var nextArrivingTrain =
-    // remainder= (initial train time) - (current time)
-    // diff= (remainder) % (train frequency)
-    
+  var currentTime = moment().format("HH:mm");
+  
+    // calculate difference between initial train and current time
+  var tDiff= moment().diff(moment(initialTrain), "minutes");
+    // convert to minutes
 
-  // calculate the minutes away 
+    // diff= (calculated difference) % (train frequency)
+
+  // calculate the minutes away   
+  //  var minsToNextTrain = 
+
+    // (frequency)-(remainder of tDiff)
+
+
+  
   
 
 
