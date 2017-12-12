@@ -1,11 +1,12 @@
 
 // Initialize Firebase
+// Initialize Firebase
 var config = {
   apiKey: "AIzaSyBmMuEWylCvmnDq9fJnlSqBCou_rZtoJt8",
   authDomain: "train-schedule-1766e.firebaseapp.com",
   databaseURL: "https://train-schedule-1766e.firebaseio.com",
   projectId: "train-schedule-1766e",
-  storageBucket: "",
+  storageBucket: "train-schedule-1766e.appspot.com",
   messagingSenderId: "693426029702"
 };
 firebase.initializeApp(config);
@@ -13,7 +14,7 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 //  create train information line
-$(".submit").on("click", function () {
+$("#submit-train-info").on("click", function () {
 
   // take user input
   var trainName = $("#train-name").val().trim();
