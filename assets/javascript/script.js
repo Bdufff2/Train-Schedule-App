@@ -70,7 +70,10 @@ database.ref().on("child_added", function (childSnapshot) {
   // calculate the next arrival time based off of initial train time
   // next arrival =
 
-  // var nextArrivingTrain = moment(initialTrain).format("HH:mm");
+  // var nextArrivingTrain =
+    // remainder= (initial train time) - (current time)
+    // diff= (remainder) % (train frequency)
+    
 
   // calculate the minutes away 
   
